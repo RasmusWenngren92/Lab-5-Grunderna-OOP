@@ -7,6 +7,11 @@ namespace Circle
     {
         static void Main(string[] args)
         {
+            // Programmer   : Rasmus Wenngren
+            // Program      : Fullstack .NET
+            // Course       : Promgrammering med C# och .NET
+            // Lab 5        : Grunderna OOP
+            
             //Bool for running the program
             bool endApp = false;
 
