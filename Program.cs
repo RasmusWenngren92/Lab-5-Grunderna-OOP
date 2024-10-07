@@ -49,7 +49,7 @@ namespace Circle
                 }
             }
         }
-        // static function d display a menu
+        // static function for display a menu
         public static void PrintMenu()
         {
             Console.WriteLine("\n\tHej och Välkommen!" +
@@ -58,7 +58,7 @@ namespace Circle
                                     "\n\t[B] Formler för en Triangel." +
                                     "\n\t[C] Avsluta programmet.");
         }
-        // static function d display a menu
+        // static function for display a menu
         public static void CircleMenu()
         {
             Console.WriteLine("\n\tHej, välj nedan vad du vill göra." +
@@ -68,7 +68,7 @@ namespace Circle
                                     "\n\t[D] Gå tillbaka till föregående meny.");
 
         }
-        // static function d display a menu
+        // static function for display a menu
         public static void TriangularMenu()
         {
             Console.WriteLine("\n\tHej, välj nedan vad du vill göra." +
@@ -80,6 +80,7 @@ namespace Circle
         //method containing a menu and the different calculations
         static void CircelFunction()
         {
+            // bool for running the loop, asking for input value
             bool circleBool = false;
             Console.Clear();
             Console.WriteLine("\n\tVar god ange Radien (cm) på Sfären: ");
@@ -89,13 +90,13 @@ namespace Circle
 
                  while (!circleBool)
                  {
-
+                    // showing the menu and the inpu value
                     Console.Clear();
                     Console.WriteLine($"\n\tRadien på Sfären är : {radius} cm.");
                     CircleMenu();
                     string circleMenu = Console.ReadLine().ToUpper();
 
-                        switch (circleMenu)
+                        switch (circleMenu)//a switch to let the user use different calculations and get output
                         {
                                 case "A":
                                     Console.WriteLine($"\n\tSfärens Area är: {circle.GetArea()} cm2.");
@@ -128,7 +129,7 @@ namespace Circle
         //method containing a menu and the different calculations
         static void TriangularFunction()
         {
-
+            // bool for running the loop and ansking for input values
             bool triangularBool = false;
 
             Console.Clear();
@@ -143,18 +144,18 @@ namespace Circle
             Console.WriteLine("\n\tAnge sida C (cm) på triangeln som är dess bas: ");
             string userInputSideC = Console.ReadLine();
             int sideC = ReadInt.ValidInput(userInputSideC);
-
+            //creating a new triangular object
             Triangular triangular = new Triangular(sideA, sideB, sideC);
 
                 while (!triangularBool)
                 {
-
+                    // prints the menu and shows the user the input
                     Console.Clear();
                     Console.Write($"\n\tDina sidor på Triangeln är: \n\t{sideA}cm & {sideB}cm & {sideC}cm");
                     Console.WriteLine();
                     TriangularMenu();
                     string triangularLoop = Console.ReadLine().ToUpper();
-                    switch (triangularLoop)
+                    switch (triangularLoop)//a switch to let the user use different calculations and get output
                     {
                             case "A":
                             Console.WriteLine($"\n\tTriangelns Area är: {triangular.GetArea()} cm2.");
