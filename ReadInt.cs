@@ -8,7 +8,7 @@ namespace Circle
 {
     internal class ReadInt
     {
-
+        // checking the user input if it is a number or not, if not an error message will occure
         public static int ValidInput(string userInput)
         {
             while (true)
