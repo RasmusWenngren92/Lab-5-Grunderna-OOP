@@ -1,4 +1,5 @@
 Circle and Triangle Calculator
+
 This is a console application written in C# that allows users to calculate various properties of spheres and triangles, such as area, volume, and perimeter. The application is structured around object-oriented principles, as part of a lab assignment for a C# and .NET programming course.
 
 Features
